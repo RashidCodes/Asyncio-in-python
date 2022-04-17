@@ -107,9 +107,9 @@ asyncio.run(display_date())
 
 <br/>
 
-## Running tasks concurrently using <code>asyncio.gather(*aws, return_exceptions=False)</code>
+## Running tasks concurrently using <code>asyncio.gather(<i>\*aws, return_exceptions=False</i>)</code>
 
-If any awaitable in aws is a coroutine, it is automatically scheduled as a ```Task```.
+If any awaitable in <i>aws</i> is a coroutine, it is automatically scheduled as a ```Task```.
 
 If all awaitables execute successfully, each result is persisted in a list. The order of this list corresponds to the order of the awaitables in *aws*.
 
@@ -228,6 +228,8 @@ asyncio.run(main())
 
 ```
 
+<br/>
+
 ## Executing code in thread or process pools with asyncio
 You can executor blocking or cpu-bound operations in thread or process pools (executors).
 
@@ -268,6 +270,7 @@ asyncio.run(main())
 
 ```
 
+<br/>
 
 
 # References:
