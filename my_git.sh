@@ -11,7 +11,7 @@ fi
 
 
 # Do your thing
-git add .
+git add . 1> /dev/null
 
 if [[ $? -eq 0 ]]
 then
@@ -25,7 +25,7 @@ fi
 
 
 # Commit your awesome changes
-git commit -m "${2}"
+git commit -m "${2}" 1> /dev/null
 
 if [[ $? -eq 0 ]]
 then
