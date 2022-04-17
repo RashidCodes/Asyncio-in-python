@@ -204,7 +204,7 @@ asyncio.run(main())
 
 <br/>
 
-## Running in Threads with <code>asyncio.to_thread(<i>func, /, *args, **kwargs)</i>)<code>
+## Running in Threads with <code>asyncio.to_thread(<i>func, /, \*\*args, \*\*\*kwargs)</i>)<code>
 
 If you have several blocking IO bound tasks, you can run them in different threads using ```asyncio``` as follows. An interesting thing to remember here is <code>asyncio.gather()</code>. Even though you're running several blocking IO operations in different threads, the awaitables are still run in a specific sequence.
 
