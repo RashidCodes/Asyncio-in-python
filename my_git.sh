@@ -47,7 +47,7 @@ case "${1}" in
 		BRANCH="uat"
 		;;
 	*)
-		BRANCH="master"
+		BRANCH="main"
 		;;
 esac
 

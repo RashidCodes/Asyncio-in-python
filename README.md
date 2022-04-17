@@ -83,7 +83,7 @@ async def main():
 ```
 
 
-## Sleeping
+## Sleeping with <code>asyncio.sleep(<i>delay, result=None</i>)</code>
 Sleeping is blocking an operation for a few seconds. A result is provided to the caller when a coroutine completes. To allow for long-running functions to avoid hogging up the event loop while they execute, the delay can be set to 0 to provide an optimized path to allow other tasks to run.
 
 
@@ -147,7 +147,7 @@ asyncio.run(main())
 
 ```
 
-
+<br/>
 
 ## Shielding from cancellation using <code>asyncio.shield(<i>aw</i>)</code>
 
@@ -165,9 +165,9 @@ is similar to
 res = await something()
 ```
 
-unless the scheduled task is cancelled. In that case, ```something()``` keeps running but it raises a ```asyncio.CancelledError````.
+unless the scheduled task is cancelled. In that case, ```something()``` keeps running but it raises a <code>asyncio.CancelledError</code>.
 
-If you wanted to completely ignore cancellation, then you can use the try/except clause as follows (see [handling_cancellations.py](somelink.com):
+If you wanted to completely ignore cancellation, then you can use the try/except clause as follows (see [handling_cancellations](https://github.com/RashidCodes/Asyncio-in-python/blob/main/handling_cancellations.py)):
 ```python
 try:
 	res = await shield(something())
