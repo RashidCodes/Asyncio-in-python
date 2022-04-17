@@ -82,6 +82,7 @@ async def main():
 
 ```
 
+<br/>
 
 ## Sleeping with <code>asyncio.sleep(<i>delay, result=None</i>)</code>
 Sleeping is blocking an operation for a few seconds. A result is provided to the caller when a coroutine completes. To allow for long-running functions to avoid hogging up the event loop while they execute, the delay can be set to 0 to provide an optimized path to allow other tasks to run.
@@ -104,7 +105,7 @@ async def display_date():
 asyncio.run(display_date())
 ```
 
-
+<br/>
 
 ## Running tasks concurrently using <code>asyncio.gather(*aws, return_exceptions=False)</code>
 
@@ -178,8 +179,27 @@ except CancelledError:
 This practice however is not recommended.
 
 
+<br/>
 
 
+# Timeouts with <code>asyncio.wait_for(<i>aw, timeout</i>)</code>
+```python
+async def eternity():
+	# Sleep for eternity
+	await asyncio.sleep(3600)
+	
+	print("Can you sleep longer than this?")
+
+
+async def main():
+	try:
+		await asyncio.wait_for(eternity(), timeout=1.0)
+	except asyncio.TimeoutError:
+		print('timeout!')
+
+
+asyncio.run(main())
+```
 
 # References:
 [Python Docs](https://docs.python.org/3/library/asyncio-task.html)
