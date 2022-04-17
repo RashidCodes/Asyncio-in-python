@@ -17,15 +17,16 @@ A coroutine can be run using three main mechanisms namely:
 - ```Awaiting``` on a coroutine
 - ```asyncio.create_task()```
 
-<blockquote>Note that calling the ```main()``` function will not schedule the coroutine to run.</blockquote>
+<blockquote>Note that calling the <code>main()</code> function will not schedule the coroutine to run.</blockquote>
 
+<br/>
 
 ### <code>asyncio.run()</code>
 This function is used to run coroutines. It takes care of the asyncio event loop, *finalises asynchronous generators*, and closes the threadpool.
 
 ```asyncio.run()``` cannot be run while another ```asyncio``` event loop is running in the same thread.
 
-<blockquote>In computer science, the event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program. 
+<blockquote>In computer science, the event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program. </blockquote>
 
 <br/>
 
@@ -177,3 +178,8 @@ except CancelledError:
 This practice however is not recommended.
 
 
+
+
+
+# References:
+[Python Docs](https://docs.python.org/3/library/asyncio-task.html)
